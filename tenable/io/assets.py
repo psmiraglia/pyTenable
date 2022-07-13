@@ -293,3 +293,7 @@ class AssetsAPI(TIOEndpoint):
         payload['query'] = {filter_type: parsed}
 
         return self._api.post('api/v2/assets/bulk-jobs/delete', json=payload).json()
+
+    def search(self, *filters):
+        path = 'api/v3/assets/host/search'
+        print(path)
